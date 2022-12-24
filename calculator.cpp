@@ -22,9 +22,9 @@ main_program{
     Text t3(125,150,"CALCULATOR BY ANSHUL");
     wait(1);
     t3.reset(190,50,"");      // to display result
-    Text t1(70,30,a[0]);      // to print 1st input
+    Text t1(70,30,"");      // to print 1st input
     t1.imprint();
-    Text t2(190,30,a[1]);     // to print 2nd input
+    Text t2(190,30,"");     // to print 2nd input
     t2.imprint();
     Text t4;                  //to print operator(+,-,*,/)
     t4.imprint();
