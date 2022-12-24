@@ -9,4 +9,8 @@
     Now compile program using command as "s++ filename.cpp"
 ## For Windows
     https://www.cse.iitb.ac.in/~ranade/simplecpp/SimpleCodeBlocks.exe
-##### install this ide to run the program and simply compile and run it
+##### Download and install this ide to run the program and simply compile and run it
+
+### It looks like it 
+
+![calc](https://user-images.githubusercontent.com/121307717/209436583-c35a9349-a7b2-429a-9ce2-c3da3083cff1.png)
