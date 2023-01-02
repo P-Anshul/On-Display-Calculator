@@ -1,4 +1,5 @@
 #include<simplecpp>
+
 struct button{
     // x is X cordinate, y is Y cordinate,w is width, h is height
     int x,y,w,h;
@@ -14,6 +15,7 @@ struct button{
         //checking is the click is inside button or not
     }
 };
+
 main_program{
     initCanvas("CALCULATOR BY ANSHUL",250,350);
     double a[2]={0,0},b[2]={70,190},temp=0;
