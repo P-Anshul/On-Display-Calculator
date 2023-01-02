@@ -1,5 +1,4 @@
 #include<simplecpp>
-
 struct button{
     // x is X cordinate, y is Y cordinate,w is width, h is height
     int x,y,w,h;
