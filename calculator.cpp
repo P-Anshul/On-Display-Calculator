@@ -1,4 +1,8 @@
 #include<simplecpp>
+#include<string>
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
 struct button{
     // x is X cordinate, y is Y cordinate,w is width, h is height
     int x,y,w,h;
@@ -14,11 +18,11 @@ struct button{
         //checking is the click is inside button or not
     }
 };
-
 main_program{
     initCanvas("CALCULATOR BY ANSHUL",250,350);
-    double a[2]={0,0},b[2]={70,190},temp=0;
-    int i=0;
+    string a[2];
+    float temp=0;
+    int i=0,b[2]={70,190};
     char y;
     Text t3(125,150,"CALCULATOR BY ANSHUL");
     wait(1);
@@ -43,51 +47,54 @@ main_program{
     button b10("3",150,200,40,40);
     button b11("+",200,200,40,40);
     button b12("0",50,250,40,40);
-    button b13("Exit",100,250,40,40);
+    button b13(".",100,250,40,40);
     button b14("=",150,250,40,40);
     button b15("-",200,250,40,40);
     button b16("CE",50,300,40,40);
     button b17("Ac",100,300,40,40);
-    button b18("",150,300,40,40);
-    button b19("",200,300,40,40);
+    //button b18("",150,300,40,40);
+    button b19("EXIT",175,300,80,40);
     while(true){
         int key=getClick();      //taking input from mouse click
         if(b1.in(key)){
-            a[i]=a[i]*10+7;       // taking button inputs and varifying
+            a[i]=a[i]+'7';       // taking button inputs and varifying
         }
         else if(b2.in(key)){
-            a[i]=a[i]*10+8;
+            a[i]=a[i]+'8';
         }
         else if(b3.in(key)){
-            a[i]=a[i]*10+9;
+            a[i]=a[i]+'9';
         }
         else if(b5.in(key)){
-            a[i]=a[i]*10+4;
+            a[i]=a[i]+'4';
         }
         else if(b6.in(key)){
-            a[i]=a[i]*10+5;
+            a[i]=a[i]+'5';
         }
         else if(b7.in(key)){
-            a[i]=a[i]*10+6;
+            a[i]=a[i]+'6';
         }
         else if(b8.in(key)){
-           a[i]=a[i]*10+1;
+           a[i]=a[i]+'1';
         }
         else if(b9.in(key)){
-           a[i]=a[i]*10+2;
+           a[i]=a[i]+'2';
         }
         else if(b10.in(key)){
-           a[i]=a[i]*10+3;
+           a[i]=a[i]+'3';
         }
         else if(b12.in(key)){
-            a[i]=a[i]*10+0;
+            a[i]=a[i]+'0';
+        }
+        else if(b13.in(key)){
+            a[i]=a[i]+'.';
         }
         else if(b16.in(key)){
-            a[i]=int(a[i]/10);
+            a[i]=a[i].substr(0, a[i].size()-1);
         }
         else if(b4.in(key)){
             y='/';
-            a[1]=0;
+            a[1]='0';
             if(i==0){
                 t4.reset(130,30,"/");
                 i++;
@@ -101,7 +108,7 @@ main_program{
         }
         else if(b_.in(key)){
             y='*';
-            a[1]=0;
+            a[1]=' ';
             if(i==0){
                 t4.reset(130,30,"*");
                 i++;
@@ -115,7 +122,7 @@ main_program{
         }
         else if(b11.in(key)){
             y='+';
-            a[1]=0;
+            a[1]='0';
             if(i==0){
                 t4.reset(130,30,"+");
                 i++;
@@ -129,7 +136,7 @@ main_program{
         }
         else if(b15.in(key)){
             y='-';
-            a[1]=0;
+            a[1]='0';
             if(i==0){
                 t4.reset(130,30,"-");
                 i++;
@@ -142,29 +149,29 @@ main_program{
             }
         }
         else if(b17.in(key)){
-            a[0]=0;a[1]=0;i=0;
+            a[0]='0';a[1]='0';i=0;
             t1.reset(b[i],30,a[1]);
             t4.reset(130,30," ");
         }
-        else if(b13.in(key)){
-            break;
+        else if(b19.in(key)){
+            break;    		//exit Key
         }
         t1.reset(b[1],30,a[1]);
         t2.reset(b[0],30,a[0]);
         if(y=='+'){            //perfoming operations
-            temp=a[0]+a[1];
+            temp=stof(a[0])+stof(a[1]);
         }
         else if(y=='-'){
-            temp=a[0]-a[1];
+            temp=stof(a[0])-stof(a[1]);
         }
         else if(y=='*'){
-            temp=a[0]*a[1];
+            temp=stof(a[0])*stof(a[1]);
         }
         else if(y=='/'){
-            temp=a[0]/a[1];
+            temp=stof(a[0])/stof(a[1]);
         }
         if(b14.in(key)){//= key
-            a[0]=temp;
+            a[0]=to_string(temp);
             i=0;
         }
         t3.reset(190,50,temp);
