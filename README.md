@@ -13,4 +13,5 @@
 
 ### It looks like it 
 
-![calc](https://user-images.githubusercontent.com/121307717/209436583-c35a9349-a7b2-429a-9ce2-c3da3083cff1.png)
+![calc](calculator.png)
+
