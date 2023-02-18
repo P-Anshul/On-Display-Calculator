@@ -11,7 +11,7 @@
    [Download for windows](https://www.cse.iitb.ac.in/~ranade/simplecpp/SimpleCodeBlocks.exe)
 ##### Download and install this ide to run the program and simply compile and run it
 
-### It looks like it 
+### It looks like this
 
 ![calc](calculator.png)
 
